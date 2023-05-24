@@ -16,6 +16,7 @@ export async function sendMessage(
     } else {
       message = String(error);
     }
+    console.error("erro ", error);
     return next(createHttpError(500, message));
   }
 }
